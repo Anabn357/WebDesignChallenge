@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <style>
+        img{ width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;}
+    </style>
+    <meta charset="UTF-8">
+    <title>Comparison</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+           <a class="navbar-brand" href="#">Latitude</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+         
+           <div class="collapse navbar-collapse" id="navbarColor01">
+             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <input class="MyButton1" type="button" value="Home" onclick="window.location.href='Index.html'" />   
+                </li>
+               <li class="nav-item">
+                   <div class="dropdown">
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Pages
+                       </button>
+                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="Temperature.html">Temperature</a>
+                           <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                           <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                           <a class="dropdown-item" href="Wind-Speed.html">Wind-speed</a>
+                       </div>
+                       </div>
+               </li>
+               <li class="nav-item">
+                   <input class="MyButton2" type="button" value="Data" onclick="window.location.href='Weather_DF.html'" />   
+               </li>
+               <li class="nav-item">
+                   <input class="MyButton1" type="button" value="Comparison" onclick="window.location.href='Comparison.html'" />
+               </li>
+             </ul>
+           </div>
+         </nav>
+   </head>
+   <body>   
+   <br>
+
+<br>           
+        <main class="comparison_container">
+                <header>
+                    <h1>Comparison: Latitude vs. X</h1>
+                </header>
+                <p>Click any plot to get an in-depth analysis.</p>
+            <div class="row">
+                    <div class="col-sm-6 col-md-6">      
+                            <a href="Temperature.html"><figure class="comparison_figure" style="margin:20px;margin-left: 20%">
+                                <figcaption style="text-align: center;font-size: 150%">vs. Temperature</figcaption>
+                                <img src="./Resources/Images/Temperature.png" alt="Temperature" >
+                            </figure></a>    
+                    </div>
+                     <div class="col-sm-6 col-md-6">
+                           <a href="Cloudiness.html"><figure class="comparison_figure" style="margin:20px;margin-left: 20%">
+                            <figcaption style="text-align: center;font-size: 150%">vs. Cloudiness</figcaption>
+                           <img src="./Resources/Images/Cloudiness.png" alt="Cloudiness" >
+                                  </figure></a>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                           <a href="Humidity.html"><figure class="comparison_figure" style="margin-bottom:30%;margin-left: 20%">
+                            <figcaption style="text-align: center;font-size: 150%">vs. Humidity</figcaption>
+                           <img src="./Resources/Images/Humidity.png" alt="Humidity" >
+                                </figure></a>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                            <a href="Wind-Speed.html"><figure class="comparison_figure" style="margin-bottom:30%;margin-left: 20%;">
+                              <figcaption style="text-align: center;font-size: 150%">vs. Wind-speed</figcaption>
+                                <img src="./Resources/Images/Wind Speed.png" alt="Wind-Speed" >
+                             </figure></a>
+                    </div>
+            </div>
+        </main>
+<br>
+<br>       
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> 
