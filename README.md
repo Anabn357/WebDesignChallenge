@@ -1,157 +1,127 @@
-# SQLAlchemy Homework - Surfs Up!
+# Web Design Homework - Web Visualization Dashboard (Latitude)
+
+## Background
+
+Data is more powerful when we share it with others! Let's take what we've learned about HTML and CSS to create a dashboard showing off the analysis we've done.
+
+![Images/landingResize.png](Images/landingResize.png)
 
 ### Before You Begin
 
-1. Create a new repository for this project called `sqlalchemy-challenge`. **Do not add this homework to an existing repository**.
+1. Create a new repository for this project called `Web-Design-Challenge`. **Do not add this homework to an existing repository**.
 
 2. Clone the new repository to your computer.
 
-3. Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
+3. Inside your local git repository, create a directory for the web challenge. Use a folder name to correspond to the challenge: **WebVisualizations**.
 
-4. Push the above changes to GitHub or GitLab.
+4. Add your **html** files to this folder as well as your **assets**, **Resources** and **visualizations** folders.
 
-![surfs-up.png](Images/surfs-up.png)
+5. Push the above changes to GitHub or GitLab.
 
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
+6. Deploy to GitHub pages. 
 
-## Step 1 - Climate Analysis and Exploration
+## Latitude - Latitude Analysis Dashboard with Attitude
 
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+For this homework we'll be creating a visualization dashboard website using visualizations we've created in a past assignment. Specifically, we'll be plotting [weather data](Resources/cities.csv).
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
+In building this dashboard, we'll create individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. We'll also have a landing page, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+### Website Requirements
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+For reference, see the ["Screenshots" section](#screenshots) below.
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+The website must consist of 7 pages total, including:
 
-### Precipitation Analysis
+* A [landing page](#landing-page) containing:
+  * An explanation of the project.
+  * Links to each visualizations page.
+* Four [visualization pages](#visualization-pages), each with:
+  * A descriptive title and heading tag.
+  * The plot/visualization itself for the selected comparison.
+  * A paragraph describing the plot and its significance.
+* A ["Comparisons" page](#comparisons-page) that:
+  * Contains all of the visualizations on the same page so we can easily visually compare them.
+  * Uses a bootstrap grid for the visualizations.
+    * The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
+* A ["Data" page](#data-page) that:
+  * Displays a responsive table containing the data used in the visualizations.
+    * The table must be a bootstrap table component. [Hint](https://getbootstrap.com/docs/4.3/content/tables/#responsive-tables)
+    * The data must come from exporting the `.csv` file as HTML, or converting it to HTML. Try using a tool you already know, pandas. Pandas has a nifty method approprately called `to_html` that allows you to generate a HTML table from a pandas dataframe. See the documentation [here](https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.to_html.html)
 
-* Design a query to retrieve the last 12 months of precipitation data.
+The website must, at the top of every page, have a navigation menu that:
 
-* Select only the `date` and `prcp` values.
+* Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+* Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+* Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
+* Is responsive (using media queries). The nav must have similar behavior as the screenshots ["Navigation Menu" section](#navigation-menu) (notice the background color change).
 
-* Load the query results into a Pandas DataFrame and set the index to the date column.
+Finally, the website must be deployed to GitHub pages.
 
-* Sort the DataFrame values by `date`.
+When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the GitHub repository.
 
-* Plot the results using the DataFrame `plot` method.
+### Considerations
 
-  ![precipitation](Images/precipitation.png)
+* You may use the [weather data](Resources/cities.csv) or choose another dataset. Alternatively, you may use the included [cities dataset](Resources/cities.csv) and pull the images from the [assets folder](Resources/assets).
+* You must use bootstrap. This includes using the bootstrap `navbar` component for the header on every page, the bootstrap table component for the data page, and the bootstrap grid for responsiveness on the comparison page.
+* You must deploy your website to GitHub pages, with the website working on a live, publicly accessible URL as a result.
+* Be sure to use a CSS media query for the navigation menu.
+* Be sure your website works at all window widths/sizes.
+* Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
 
-* Use Pandas to print the summary statistics for the precipitation data.
+### Bonuses
 
-### Station Analysis
+* Use a different dataset! The requirements above still hold, but make it your own.
+* Use a bootstrap theme to customize your website. You may use a tool like [Bootswatch](https://bootswatch.com/). Make it look snazzy, give it some attitude. If using this, be sure you also meet all of the requirements listed above.
+* Add extra visualizations! The more comparisons the better, right?
+* Use meaningful glyphicons next to links in the header.
+* Have visualization navigation on every visualizations page with an active state. See the screenshots below.
 
-* Design a query to calculate the total number of stations.
+### Screenshots
 
-* Design a query to find the most active stations.
+This section contains screenshots of each page that must be built, at varying screen widths. These are a guide; you can meet the requirements without having the pages look exactly like the below images.
 
-  * List the stations and observation counts in descending order.
+#### Landing page
 
-  * Which station has the highest number of observations?
+Large screen:
+![Landing page large screen](Images/landing-lg.png)
 
-  * Hint: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
+Small screen:
+![Landing page small screen](Images/landing-sm.png)
+ï¿¼
 
-* Design a query to retrieve the last 12 months of temperature observation data (TOBS).
+#### Comparisons page
 
-  * Filter by the station with the highest number of observations.
+Large screen:
+![comparison page large screen](Images/comparison-lg.png)
 
-  * Plot the results as a histogram with `bins=12`.
+Small screen:
+![comparison page small screen](Images/comparison-sm.png)
 
-    ![station-histogram](Images/station-histogram.png)
+#### Data page
 
-- - -
+Large screen:
+![data page large screen](Images/data-lg.png)
 
-## Step 2 - Climate App
+Small screen:
+![data page small screen](Images/data-sm.png)
 
-Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
+#### Visualization pages
 
-* Use Flask to create your routes.
+You'll build four of these, one for each visualization. Here's an example of one:
 
-### Routes
+Large screen:
+![visualize page large screen](Images/visualize-lg.png)
 
-* `/`
+Small screen:
+![visualize page small screen](Images/visualize-sm.png)
 
-  * Home page.
+#### Navigation menu
 
-  * List all routes that are available.
+Large screen:
+![nav menu large screen](Images/nav-lg.png)
 
-* `/api/v1.0/precipitation`
-
-  * Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
-
-  * Return the JSON representation of your dictionary.
-
-* `/api/v1.0/stations`
-
-  * Return a JSON list of stations from the dataset.
-
-* `/api/v1.0/tobs`
-  * Query the dates and temperature observations of the most active station for the last year of data.
-  
-  * Return a JSON list of temperature observations (TOBS) for the previous year.
-
-* `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
-
-  * Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
-
-  * When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
-
-  * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
-
-## Hints
-
-* You will need to join the station and measurement tables for some of the queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
-
-- - -
-
-## Bonus: Other Recommended Analyses
-
-* The following are optional challenge queries. These are highly recommended to attempt, but not required for the homework.
-
-### Temperature Analysis I
-
-* Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
-
-* You may either use SQLAlchemy or pandas's `read_csv()` to perform this portion.
-
-* Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.
-
-* Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
-
-### Temperature Analysis II
-
-* The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
-
-* Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e., use "2017-01-01" if your trip start date was "2018-01-01").
-
-* Plot the min, avg, and max temperature from your previous query as a bar chart.
-
-  * Use the average temperature as the bar height.
-
-  * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
-
-    ![temperature](Images/temperature.png)
-
-### Daily Rainfall Average
-
-* Calculate the rainfall per weather station using the previous year's matching dates.
-
-* Calculate the daily normals. Normals are the averages for the min, avg, and max temperatures.
-
-* You are provided with a function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Be sure to use all historic TOBS that match that date string.
-
-* Create a list of dates for your trip in the format `%m-%d`. Use the `daily_normals` function to calculate the normals for each date string and append the results to a list.
-
-* Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.
-
-* Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
-
-  ![daily-normals](Images/daily-normals.png)
+Small screen:
+![nav menu small screen](Images/nav-sm.png)
 
 ### Copyright
 
