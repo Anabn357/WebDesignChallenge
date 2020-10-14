@@ -77,3 +77,29 @@ When finished, submit to BootcampSpot the links to 1) the deployed app and 2) th
 
 ### Screenshots
 
+This section contains screenshots of each page that must be built, at varying screen widths. These are a guide; you can meet the requirements without having the pages look exactly like the below images.
+
+#### Landing page
+
+Large screen:
+![Landing page large screen](Images/landing-lg.png)
+
+Small screen:
+![Landing page small screen](Images/landing-sm.png)
+ï¿¼
+
+#### Comparisons page
+
+Large screen:
+![comparison page large screen](Images/comparison-lg.png)
+
+Small screen:
+![comparison page small screen](Images/comparison-sm.png)
+
+#### Data page
+
+Large screen:
+![data page large screen](Images/data-lg.png)
+
+Small screen:
+![data page small screen](Images/data-sm.png)
