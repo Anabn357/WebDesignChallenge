@@ -103,3 +103,29 @@ Large screen:
 
 Small screen:
 ![data page small screen](Images/data-sm.png)
+
+
+
+
+#### Visualization pages
+
+You'll build four of these, one for each visualization. Here's an example of one:
+
+Large screen:
+![visualize page large screen](Images/visualize-lg.png)
+
+Small screen:
+![visualize page small screen](Images/visualize-sm.png)
+
+#### Navigation menu
+
+Large screen:
+![nav menu large screen](Images/nav-lg.png)
+
+Small screen:
+![nav menu small screen](Images/nav-sm.png)
+
+### Copyright
+
+Trilogy Education Services Â© 2019. All Rights Reserved.
+
